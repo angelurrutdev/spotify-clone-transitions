@@ -12,7 +12,7 @@ const playListSongs = songs.filter(
 );
 ---
 
-<Layout title="Spotify Clone">
+<Layout title=" Album | Spotify Clone">
   <div
     id="playlist-container"
     class="relative flex flex-col h-full bg-zinc-900 overflow-x-hidden bg-gradient-to-t from-50% from-zinc-900 via-zinc-900/80"
@@ -22,11 +22,11 @@ const playListSongs = songs.filter(
     <!-- <PageHeader /> -->
 
     <header class="flex flex-row gap-8 px-6 mt-12">
-      <picture class="aspect-square w-52 h-52 flex-none">
+      <picture class="aspect-square size-52 flex-none">
         <img
           src={playlist?.cover}
           alt={`Cover of ${playlist?.title}`}
-          class="object-cover size-full shadow-lg"
+          class="object-cover size-full shadow-lg rounded-md"
           transition:name=`playlist ${playlist?.id} image`
         />
       </picture>

@@ -3,16 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import PlayListItemCard from "@/components/PlayListItemCard.astro";
 import { playlists } from "@/lib/data";
 import Greeting from "@/components/Greeting.svelte";
+import ArrowUp from "@/icons/ArrowUp.astro";
 ---
 
-<Layout title="Spotify Clone">
+<Layout title="Inicio | Spotify Clone">
   <div
     id="playlist-container"
     class="relative transition-all duration-1000 bg-green-600"
   >
     <!-- <PageHeader /> -->
 
-    <div class="relative z-10 px-6 pt-10">
+    <div class="flex justify-end pt-3 pr-4">
+      <a
+        class="flex flex-col justify-between hover:scale-110 hover:ease-in-out duration-100 hover:text-white"
+        title="Ver Portafolio"
+        href="https://angelurrutdev.vercel.app"
+        target="_blank"
+      >
+        <ArrowUp />
+      </a>
+    </div>
+
+    <div class="relative z-10 px-6 pt-2">
       <Greeting />
       <div class="flex flex-wrap mt-6 gap-4">
         {playlists.map((playlist) => <PlayListItemCard playlist={playlist} />)}
