@@ -2,7 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import { CardPlayButton } from "@/components/CardPlayButton";
 import { allPlaylists, songs } from "@/lib/data";
-import { MusicsTable } from "@/components/MusicTable";
+import { MusicsTable } from "../../components/MusicTable";
+
 const { id } = Astro.params;
 
 const playlist = allPlaylists.find((playlist) => playlist.id === id);
@@ -25,7 +26,7 @@ const playListSongs = songs.filter(
         <img
           src={playlist?.cover}
           alt={`Cover of ${playlist?.title}`}
-          class="object-cover w-full h-full shadow-lg rounded-md"
+          class="object-cover size-full shadow-lg"
           transition:name=`playlist ${playlist?.id} image`
         />
       </picture>
@@ -55,7 +56,7 @@ const playListSongs = songs.filter(
     </header>
 
     <div class="pl-6 pt-6">
-      <CardPlayButton client:load id={id} size="large" />
+      <CardPlayButton client:load id={id} />
     </div>
 
     <div class="relative z-10 px-6 pt-10"></div>
