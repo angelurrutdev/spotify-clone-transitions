@@ -42,7 +42,7 @@ export const MusicsTable = ({ songs }: Props) => {
                                 </td>
                                 <td className="px-4 py-2 flex gap-3">
                                     <picture className="">
-                                        <img src={song.image} alt={song.title} className="w-11 h-11" />
+                                        <img src={song.image} alt={song.title} className="size-11" />
                                     </picture>
                                     <div className="flex flex-col">
                                         <h3 className={

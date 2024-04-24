@@ -6,7 +6,7 @@ export const PlayerCurrentSong = ({ image, title, artists }) => {
           overflow-hidden
         `}>
             {image &&
-                (<picture className="w-16 h-16 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
+                (<picture className="size-16 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
                     <img src={image} alt={title} />
                 </picture>)
             }

@@ -155,7 +155,7 @@ export const songs: Song[] = [
     "albumId": 2,
     "title": "PA SIEMPRE",
     "image": `https://i.scdn.co/image/ab67616d0000b273f885fb64a381318a1c9c14e4`,
-    "artists": ["Tainy", "Arcángel", "Jhayco", "Myke Towers ..."],
+    "artists": ["Tainy", "Arcángel", "Jhayco", "Myke Towers"],
     "album": "DATA",
     "duration": "5:57"
   },

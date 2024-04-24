@@ -1,15 +1,15 @@
 <script lang="ts">
-  const currentTime = new Date()
-  const currentHour = currentTime.getHours()
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
 
-  let greeting = ""
+  let greeting = "";
 
-  if (currentHour < 12) {
-    greeting = "Buenos días"
-  } else if (currentHour < 18) {
-    greeting = "Buenas tardes"
+  if (currentHour >= 5 && currentHour < 12) {
+    greeting = "Buenos días";
+  } else if (currentHour >= 12 && currentHour < 18) {
+    greeting = "Buenas tardes";
   } else {
-    greeting = "Buenas noches"
+    greeting = "Buenas noches";
   }
 </script>
 
