@@ -8,9 +8,14 @@ interface Props {
     isCurrentSong: boolean
 }
 
-
 const isNewSongOfAnotherPlaylist = (currentMusic: CurrentMusic, song: Song) => {
-    return currentMusic.playlist?.id != song.albumId
+    const currentPlaylistId = currentMusic.playlist?.id;
+    const albumId = song.albumId;
+
+    if (typeof currentPlaylistId === "string" && typeof albumId === "string") {
+        return currentPlaylistId !== albumId;
+    }
+    return true;
 }
 
 

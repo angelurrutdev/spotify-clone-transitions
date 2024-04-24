@@ -29,13 +29,13 @@ export function PlayerControlButtonBar() {
 
   return (
     <div className="flex justify-center flex-row flex-nowrap items-center gap-4">
-      <button className="hover:scale-110" onClick={onPrevSong} title="Anterior">
+      <button className="hover:scale-110" onClick={onPrevSong} title="Previous song">
         <Prev />
       </button>
       <button className="bg-white text-black rounded-full p-2 hover:scale-110" onClick={onPlayPause}>
-        {isPlaying ? <Pause /> : <Play />}
+        {isPlaying ? <Pause className="" /> : <Play className="" />}
       </button>
-      <button className="hover:scale-110" onClick={onNextSong} title="Proxima">
+      <button className="hover:scale-110" onClick={onNextSong} title="Next song">
         <Next />
       </button>
     </div>
