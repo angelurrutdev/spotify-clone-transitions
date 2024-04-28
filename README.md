@@ -4,8 +4,6 @@ Spotify Clon con [Astro View Transitions](https://docs.astro.build/en/guides/vie
 
 ### Acerca del Proyecto
 
-Esta Web fue creada con fines de aprendizaje.
-
 **La API de View Transition** es una función de transiciones animadas entre páginas que hace que el cambio de una a otra sea mucho más suave, sutil y agradable visualmente. Puedes leer mas en estos Links:
 
 - Documentación de Astro : https://docs.astro.build/en/guides/view-transitions/

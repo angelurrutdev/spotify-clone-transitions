@@ -4,7 +4,6 @@ import PlayListItemCard from "@/components/PlayListItemCard.astro";
 import { playlists } from "@/lib/data";
 import Greeting from "@/components/Greeting.svelte";
 import ArrowUp from "@/icons/ArrowUp.astro";
-import PlayListCardHero from "@/components/PlayListCardHero.astro";
 ---
 
 <Layout title="Inicio | Spotify Clone">
@@ -16,7 +15,7 @@ import PlayListCardHero from "@/components/PlayListCardHero.astro";
 
     <div class="flex justify-end pt-3 pr-4">
       <a
-        class="flex flex-col justify-between hover:scale-110 hover:ease-in-out duration-300 hover:text-white"
+        class="flex flex-col justify-between hover:scale-110 hover:ease-in-out duration-100 hover:text-white"
         title="Ver Portafolio"
         href="https://angelurrutdev.vercel.app"
         target="_blank"
@@ -27,27 +26,13 @@ import PlayListCardHero from "@/components/PlayListCardHero.astro";
 
     <div class="relative z-10 px-6 pt-2">
       <Greeting client:visible />
-
-      <div
-        class="grid gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 grid-rows-2 mt-6"
-      >
-        {playlists.map((playlist) => <PlayListCardHero playlist={playlist} />)}
+      <div class="flex flex-wrap mt-6 gap-4">
+        {playlists.map((playlist) => <PlayListItemCard playlist={playlist} />)}
       </div>
 
-      <div class="mt-10">
-        <h2 class="text-2xl font-bold mb-6">Hechas para ti</h2>
-        <div class="flex flex-wrap gap-4">
-          {
-            playlists.map((playlist) => (
-              <PlayListItemCard playlist={playlist} />
-            ))
-          }
-        </div>
-
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-[1]"
-        >
-        </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-[1]"
+      >
       </div>
     </div>
   </div>
