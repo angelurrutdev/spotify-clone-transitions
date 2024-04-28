@@ -27,8 +27,7 @@ import ArrowUp from "@/icons/ArrowUp.astro";
     <div class="relative z-10 px-6 pt-2">
       <Greeting client:visible />
 
-      <h2 class="mt-20 text-2xl font-bold mb-2">Hechas para ti</h2>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-4 mt-6">
         {playlists.map((playlist) => <PlayListItemCard playlist={playlist} />)}
       </div>
 
