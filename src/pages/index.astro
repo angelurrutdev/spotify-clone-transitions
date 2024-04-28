@@ -4,6 +4,7 @@ import PlayListItemCard from "@/components/PlayListItemCard.astro";
 import { playlists } from "@/lib/data";
 import Greeting from "@/components/Greeting.svelte";
 import ArrowUp from "@/icons/ArrowUp.astro";
+import PlayListCardHero from "@/components/PlayListCardHero.astro";
 ---
 
 <Layout title="Inicio | Spotify Clone">
@@ -26,7 +27,15 @@ import ArrowUp from "@/icons/ArrowUp.astro";
 
     <div class="relative z-10 px-6 pt-2">
       <Greeting client:visible />
-      <div class="flex flex-wrap mt-6 gap-4">
+
+      <div
+        class="grid gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 grid-rows-2 mt-6"
+      >
+        {playlists.map((playlist) => <PlayListCardHero playlist={playlist} />)}
+      </div>
+
+      <h2 class="mt-20 text-2xl font-bold mb-2">Hechas para ti</h2>
+      <div class="flex flex-wrap gap-4">
         {playlists.map((playlist) => <PlayListItemCard playlist={playlist} />)}
       </div>
 
